@@ -1,0 +1,6 @@
+# Usage: rake test
+# Usage: rake KEY=VALUE test
+
+task :test do
+  puts("KEY = #{ENV['key'].inspect}")
+end

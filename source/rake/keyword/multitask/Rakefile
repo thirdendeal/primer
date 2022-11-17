@@ -1,0 +1,23 @@
+# Usage: rake test
+
+# Rake allows parallel execution of prerequisites
+
+multitask test: [:alpha, :beta] do
+  puts('Multitask :test')
+end
+
+# Parallel prerequisites are fired in reverse
+
+task alpha: :gamma do
+  puts('Parallel prerequisite :alpha')
+end
+
+task beta: :gamma do
+  puts('Parallel prerequisite :beta')
+end
+
+# Common secondary prerequisites only run once
+
+task :gamma do
+  puts('Secondary prerequisite :gamma')
+end

@@ -1,0 +1,5 @@
+# Usage: rake test
+
+task :test do |bind|
+  puts("Task :#{bind.name}")
+end

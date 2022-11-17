@@ -1,0 +1,11 @@
+# Usage: rake test
+
+# A task may be specified in more than one place
+
+task :test do
+  puts('Task :test')
+end
+
+task :test do
+  puts('Task :test')
+end

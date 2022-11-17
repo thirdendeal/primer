@@ -1,0 +1,7 @@
+# Usage: rake test
+# Usage: rake test[value, ...]
+# Usage: rake "test[spaced value, ...]"
+
+task :test do |_bind, arguments|
+  puts("arguments = #{arguments.to_a}")
+end

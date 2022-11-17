@@ -1,0 +1,8 @@
+# Usage: rake
+# Usage: rake test
+
+task default: :test
+
+task :test do
+  puts('Task :test')
+end

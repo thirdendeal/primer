@@ -1,0 +1,12 @@
+# Usage: rake test
+# Usage: rake clear_test test
+
+task :test do
+  puts('Task :test')
+end
+
+task :clear_test do
+  bind = Rake::Task[:test]
+
+  bind.clear
+end

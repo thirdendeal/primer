@@ -1,0 +1,9 @@
+# Usage: rake test
+# Usage: rake test[value]
+# Usage: rake "test[spaced value]"
+
+task :beta, [:named_parameter] do |_bind, arguments|
+  value = arguments.named_parameter
+
+  puts("named_parameter = #{value.inspect}")
+end

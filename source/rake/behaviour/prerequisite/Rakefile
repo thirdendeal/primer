@@ -1,0 +1,11 @@
+# Usage: rake test
+
+task test: [:alpha, :beta]
+
+task :alpha do
+  puts('Prerequisite :alpha')
+end
+
+task :beta do
+  puts('Prerequisite :beta')
+end
