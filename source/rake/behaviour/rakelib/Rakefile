@@ -1,0 +1,5 @@
+# Usage: rake test
+
+# Additional .rake files may be placed in a rakelib directory
+
+task test: [:alpha, :beta]
