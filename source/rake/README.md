@@ -23,3 +23,4 @@ gem install rake
 9. [namespace/env](namespace/env/Rakefile)
 10. [behavior/prerequisite](behaviour/prerequisite/Rakefile)
 11. [keyword/multitask](keyword/multitask/Rakefile)
+12. [keyword/namespace](keyword/namespace/Rakefile)

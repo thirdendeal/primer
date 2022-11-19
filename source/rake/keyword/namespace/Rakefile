@@ -1,0 +1,19 @@
+# Usage: rake test
+
+task :alpha do
+  puts('Task :alpha')
+end
+
+namespace :one do
+  task alpha: 'rake:alpha' do
+    puts('Task one:alpha')
+  end
+
+  namespace :two do
+    task alpha: '^alpha' do
+      puts('Task one:two:alpha')
+    end
+  end
+end
+
+task test: 'one:two:alpha'
