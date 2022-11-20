@@ -1,0 +1,14 @@
+# Usage: rake one
+# Usage: rake one/two
+
+# Skipped if the directory already exists
+
+directory 'one/two'
+
+task 'one' do
+  puts('Directory task one')
+end
+
+task 'one/two' do
+  puts('Directory task one/two')
+end
