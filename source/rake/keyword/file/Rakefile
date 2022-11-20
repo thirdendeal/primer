@@ -1,0 +1,12 @@
+# Usage: rake ab.txt
+
+# Skipped if the file already exists
+
+file 'ab.txt' => ['a.txt', 'b.txt'] do |bind|
+  prerequisites =
+    bind
+    .prerequisites
+    .join(' ')
+
+  sh("cat #{prerequisites} > #{bind.name}")
+end

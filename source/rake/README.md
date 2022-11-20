@@ -26,3 +26,4 @@ gem install rake
 12. [keyword/namespace](keyword/namespace/Rakefile)
 13. [behavior/rakelib](behavior/rakelib/Rakefile)
 14. [keyword/directory](keyword/directory/Rakefile)
+15. [keyword/file](keyword/file/Rakefile)
