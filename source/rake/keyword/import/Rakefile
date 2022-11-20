@@ -1,0 +1,25 @@
+# Usage: rake test
+
+# Any ready-to-go ruby file can be loaded with a require
+
+require_relative 'lib/alpha'
+
+# Generated files can be loaded with an import
+#
+# Any matching task is invoked before loading the file
+
+import 'lib/beta.rb'
+
+file 'lib/beta.rb' do |bind|
+  content = <<~RUBY
+    task :beta do
+      puts("Task :beta")
+    end
+  RUBY
+
+  IO.write(bind.name, content)
+end
+
+# Generating and using files in the same invocation
+
+task test: [:alpha, :beta]
